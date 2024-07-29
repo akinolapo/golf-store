@@ -11,6 +11,7 @@ import {
   FaUser,
   FaTimes,
 } from "react-icons/fa";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,7 +62,7 @@ const Header: React.FC = () => {
                 href="#"
                 className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
               >
-                Shop
+                <span className="flex items-center">Shop <MdKeyboardArrowDown className="text-gray-400"/></span>
               </a>
               <div className="absolute hidden group-hover:block bg-white shadow-md">
                 {/* Add dropdown items here */}
@@ -72,7 +73,7 @@ const Header: React.FC = () => {
                 href="#"
                 className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
               >
-                Accessories
+                <span className="flex items-center">Accessories <MdKeyboardArrowDown className="text-gray-400"/></span>
               </a>
               <div className="absolute hidden group-hover:block bg-white shadow-md">
                 {/* Add dropdown items here */}
@@ -143,8 +144,8 @@ const Header: React.FC = () => {
             {/* Menu items go here */}
             <nav className="flex flex-col">
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Home</a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Shop</a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Accessories</a>
+              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700"><span className="flex items-center justify-between">Shop <MdKeyboardArrowDown className="text-gray-400 text-2xl"/></span></a>
+              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700"><span className="flex items-center justify-between">Accessories <MdKeyboardArrowDown className="text-gray-400 text-2xl"/></span></a>
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Specials</a>
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Contact Us</a>
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">About Us</a>
