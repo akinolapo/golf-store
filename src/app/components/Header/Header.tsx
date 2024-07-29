@@ -64,8 +64,63 @@ const Header: React.FC = () => {
               >
                 <span className="flex items-center">Shop <MdKeyboardArrowDown className="text-gray-400"/></span>
               </a>
-              <div className="absolute hidden group-hover:block bg-white shadow-md">
-                {/* Add dropdown items here */}
+              <div className="absolute hidden group-hover:block bg-white shadow-md w-full left-0 top-full">
+                <div className="container mx-auto py-4 px-4 grid grid-cols-6 gap-4">
+                  {/* Section 1: Four Columns */}
+                  <div className="col-span-4 grid grid-cols-4 gap-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Category 1</h4>
+                      <ul>
+                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Category 2</h4>
+                      <ul>
+                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Category 3</h4>
+                      <ul>
+                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Category 4</h4>
+                      <ul>
+                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
+                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  {/* Section 2: Two Columns */}
+                  <div className="col-span-2 grid grid-cols-2 gap-4">
+                    <div className="relative">
+                      <Image src="/path/to/image1.jpg" alt="Image 1" width={500} height={500} className="object-cover w-full h-full" />
+                      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <span className="text-white">Text Overlay 1</span>
+                      </div>
+                    </div>
+                    <div className="relative">
+                      <Image src="/path/to/image2.jpg" alt="Image 2" width={500} height={500} className="object-cover w-full h-full" />
+                      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <span className="text-white">Text Overlay 2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative group">
@@ -135,7 +190,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Sliding Menu */}
-      {isMenuOpen && (
+       {isMenuOpen && (
         <div className="fixed inset-0 z-50 flex">
           <div className="bg-white w-3/4 h-full shadow-lg py-4 relative">
             <button className="absolute top-0 -right-10 text-white bg-black p-2" onClick={closeMenu}>
