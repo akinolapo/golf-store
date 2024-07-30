@@ -64,7 +64,7 @@ const Header: React.FC = () => {
               >
                 <span className="flex items-center">Shop <MdKeyboardArrowDown className="text-gray-400"/></span>
               </a>
-              <div className="absolute hidden group-hover:block bg-white shadow-md w-[820px] left-0 top-full">
+              <div className="absolute hidden group-hover:block bg-white shadow-md w-[820px] left-0 top-full z-50">
                 <div className="container mx-auto p-4 pt-8">
                   {/* Section 1: Four Columns */}
                   <div className="col-span-4 grid grid-cols-4 gap-4">
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
               >
                 <span className="flex items-center">Accessories <MdKeyboardArrowDown className="text-gray-400"/></span>
               </a>
-              <div className="absolute hidden group-hover:block bg-white shadow-md w-[820px] left-0 top-full">
+              <div className="absolute hidden group-hover:block bg-white shadow-md w-[820px] left-0 top-full z-50">
                 {/* Add dropdown items here */}
                 <div className="container mx-auto p-4 pt-8">
                   {/* Section 1: Four Columns */}
