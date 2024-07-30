@@ -14,7 +14,7 @@ export default function Home() {
       <NewArrivals/>
       <Promotion/>
       <FeaturedProducts/>
-      <BlogSlider/>      
+      <BlogSlider/>     
     </main>
   );
 }
