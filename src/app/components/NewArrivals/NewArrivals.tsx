@@ -200,7 +200,7 @@ const NewArrivals: React.FC = () => {
       </div>
       <Slider {...settings}>
         {filteredProducts.map((product) => (
-          <div key={product.id} className="p-4">
+          <div key={product.id} className="p-3">
             <div className="border border-gray-300 hover:border-red-500 relative group">
               {product.isNew && (
                 <span className="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1">

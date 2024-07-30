@@ -3,6 +3,7 @@ import HeroSlider from "./components/HeroSlider/HeroSlider";
 import MainCategory from "./components/MainCategory/MainCategory";
 import NewArrivals from "./components/NewArrivals/NewArrivals";
 import Promotion from "./components/Promotion/Promotion";
+import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       <HeroSlider/>
       <MainCategory/>
       <NewArrivals/>
-      <Promotion/>      
+      <Promotion/>
+      <FeaturedProducts/>      
     </main>
   );
 }
