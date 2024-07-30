@@ -1,10 +1,18 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaShoppingCart, FaHeart, FaRandom, FaSearch, FaStar, FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import {
+  FaShoppingCart,
+  FaHeart,
+  FaRandom,
+  FaSearch,
+  FaStar,
+  FaArrowRight,
+  FaArrowLeft,
+} from "react-icons/fa";
 import Image from "next/image";
 
 const categories = ["SHOP", "BALL", "GLOVE"];
@@ -90,6 +98,16 @@ const products = [
     price: "$29.99",
     isNew: true,
   },
+
+  {
+    id: 10,
+    image: "/images/ball6.png",
+    category: "BALL",
+    name: "Product 1",
+    rating: 5,
+    price: "$29.99",
+    isNew: true,
+  },
   // Add more products as needed
 ];
 
@@ -126,11 +144,15 @@ const NewArrivals: React.FC = () => {
       : products.filter((product) => product.category === selectedCategory);
 
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
+    // className: "center",
+    // centerMode: true,
+    // slidesPerRow: 2,
+    infinite: false,
     slidesToShow: 5,
     slidesToScroll: 1,
+    rows: 2,
+    speed: 500,
+    dots: false,
     autoplay: false,
     autoplaySpeed: 5000,
     nextArrow: <NextArrow />,
@@ -140,14 +162,16 @@ const NewArrivals: React.FC = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesPerRow: 1,
+          rows: 2,
         },
       },
       {
         breakpoint: 500,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesPerRow: 1,
+          rows: 2,
         },
       },
     ],
@@ -176,14 +200,20 @@ const NewArrivals: React.FC = () => {
       </div>
       <Slider {...settings}>
         {filteredProducts.map((product) => (
-          <div key={product.id} className="px-2">
+          <div key={product.id} className="p-4">
             <div className="border border-gray-300 hover:border-red-500 relative group">
               {product.isNew && (
                 <span className="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1">
                   New
                 </span>
               )}
-              <Image src={product.image} alt={product.name} width={150} height={150} className="flex mx-auto" />
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={150}
+                height={150}
+                className="flex mx-auto"
+              />
               <div className="p-4 text-center">
                 <p className="text-gray-500">{product.category}</p>
                 <h3 className="text-lg font-semibold">{product.name}</h3>
