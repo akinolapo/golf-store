@@ -59,7 +59,7 @@ const Header: React.FC = () => {
             </a>
             <div className="relative group">
               <a
-                href="#"
+                href="/shop"
                 className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
               >
                 <span className="flex items-center">Shop <MdKeyboardArrowDown className="text-gray-400"/></span>
@@ -243,7 +243,7 @@ const Header: React.FC = () => {
             {/* Menu items go here */}
             <nav className="flex flex-col">
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Home</a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700"><span className="flex items-center justify-between">Shop <MdKeyboardArrowDown className="text-gray-400 text-2xl"/></span></a>
+              <a href="/shop" className="text-black border-b-2 p-4 hover:text-red-700"><span className="flex items-center justify-between">Shop <MdKeyboardArrowDown className="text-gray-400 text-2xl"/></span></a>
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700"><span className="flex items-center justify-between">Accessories <MdKeyboardArrowDown className="text-gray-400 text-2xl"/></span></a>
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Specials</a>
               <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Contact Us</a>
