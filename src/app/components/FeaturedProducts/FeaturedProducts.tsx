@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,64 +8,20 @@ import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 
 const categories = ["SHOP", "BALL", "GLOVE"];
-const products = [
-  {
-    id: 1,
-    image: "/images/ball1.png",
-    category: "BALL",
-    name: "Product 1",
-    rating: 4,
-    price: "$99.99",
-  },
-  {
-    id: 2,
-    image: "/images/glove1.png",
-    category: "GLOVE",
-    name: "Product 2",
-    rating: 5,
-    price: "$79.99",
-    discountedPrice: "$59.99",
-  },
-
-  {
-    id: 3,
-    image: "/images/ball2.png",
-    category: "BALL",
-    name: "Product 3",
-    rating: 3,
-    price: "$49.99",
-    discountedPrice: "$39.99",
-  },
-  {
-    id: 4,
-    image: "/images/ball4.png",
-    category: "BALL",
-    name: "Product 4",
-    rating: 4,
-    price: "$89.99",
-  },
-  {
-    id: 5,
-    image: "/images/glove2.png",
-    category: "GLOVE",
-    name: "Product 5",
-    rating: 5,
-    price: "$69.99",
-    isNew: true,
-  },
-  {
-    id: 6,
-    image: "/images/glove3.png",
-    category: "GLOVE",
-    name: "Product 6",
-    rating: 5,
-    price: "$49.99",
-  },
-  // Add more products as needed
-];
 
 const FeaturedProducts: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("SHOP");
+  const [products, setProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch("/products.json");
+      const data = await response.json();
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
 
   const filteredProducts =
     selectedCategory === "SHOP"
@@ -87,17 +43,17 @@ const FeaturedProducts: React.FC = () => {
       {
         breakpoint: 1024,
         settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            rows: 2,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          rows: 2,
         },
       },
       {
         breakpoint: 500,
         settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            rows: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 2,
         },
       },
     ],

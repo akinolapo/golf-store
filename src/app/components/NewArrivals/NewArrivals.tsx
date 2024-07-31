@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,100 +16,6 @@ import {
 import Image from "next/image";
 
 const categories = ["SHOP", "BALL", "GLOVE"];
-const products = [
-  {
-    id: 1,
-    image: "/images/ball1.png",
-    category: "BALL",
-    name: "Product 1",
-    rating: 4,
-    price: "$99.99",
-    isNew: true,
-  },
-  {
-    id: 2,
-    image: "/images/glove1.png",
-    category: "GLOVE",
-    name: "Product 2",
-    rating: 5,
-    price: "$79.99",
-    isNew: false,
-  },
-  {
-    id: 3,
-    image: "/images/ball2.png",
-    category: "BALL",
-    name: "Product 3",
-    rating: 3,
-    price: "$49.99",
-    isNew: true,
-  },
-  {
-    id: 4,
-    image: "/images/ball4.png",
-    category: "BALL",
-    name: "Product 4",
-    rating: 4,
-    price: "$89.99",
-    isNew: false,
-  },
-  {
-    id: 5,
-    image: "/images/glove2.png",
-    category: "GLOVE",
-    name: "Product 5",
-    rating: 5,
-    price: "$69.99",
-    isNew: true,
-  },
-  {
-    id: 6,
-    image: "/images/glove3.png",
-    category: "GLOVE",
-    name: "Product 6",
-    rating: 5,
-    price: "$49.99",
-    isNew: true,
-  },
-  {
-    id: 7,
-    image: "/images/glove4.png",
-    category: "GLOVE",
-    name: "Product 7",
-    rating: 5,
-    price: "$59.99",
-    isNew: true,
-  },
-  {
-    id: 8,
-    image: "/images/ball5.png",
-    category: "BALL",
-    name: "Product 8",
-    rating: 5,
-    price: "$49.99",
-    isNew: false,
-  },
-  {
-    id: 9,
-    image: "/images/ball6.png",
-    category: "BALL",
-    name: "Product 9",
-    rating: 5,
-    price: "$29.99",
-    isNew: true,
-  },
-
-  {
-    id: 10,
-    image: "/images/ball6.png",
-    category: "BALL",
-    name: "Product 1",
-    rating: 5,
-    price: "$29.99",
-    isNew: true,
-  },
-  // Add more products as needed
-];
 
 const NextArrow = (props: any) => {
   const { onClick } = props;
@@ -137,6 +43,15 @@ const PrevArrow = (props: any) => {
 
 const NewArrivals: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("SHOP");
+  const [products, setProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    // Fetch products from the JSON file
+    fetch("/products.json")
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
 
   const filteredProducts =
     selectedCategory === "SHOP"
@@ -144,9 +59,6 @@ const NewArrivals: React.FC = () => {
       : products.filter((product) => product.category === selectedCategory);
 
   const settings = {
-    // className: "center",
-    // centerMode: true,
-    // slidesPerRow: 2,
     infinite: false,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -162,7 +74,7 @@ const NewArrivals: React.FC = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesPerRow: 1,
+          slidesToScroll: 1,
           rows: 2,
         },
       },
@@ -170,7 +82,7 @@ const NewArrivals: React.FC = () => {
         breakpoint: 500,
         settings: {
           slidesToShow: 2,
-          slidesPerRow: 1,
+          slidesToScroll: 1,
           rows: 2,
         },
       },

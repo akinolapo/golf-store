@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "image": "/images/ball1.png",
+      "category": "BALL",
+      "name": "Golf Ball Pro",
+      "rating": 4,
+      "price": "$99.99"
+    },
+    {
+      "id": 2,
+      "image": "/images/glove1.png",
+      "category": "GLOVE",
+      "name": "Golf Glove Elite",
+      "rating": 5,
+      "price": "$79.99",
+      "discountedPrice": "$59.99"
+    },
+    {
+      "id": 3,
+      "image": "/images/ball2.png",
+      "category": "BALL",
+      "name": "Golf Ball Max",
+      "rating": 3,
+      "price": "$49.99",
+      "discountedPrice": "$39.99"
+    },
+    {
+      "id": 4,
+      "image": "/images/ball4.png",
+      "category": "BALL",
+      "name": "Golf Ball Premium",
+      "rating": 4,
+      "price": "$89.99"
+    },
+    {
+      "id": 5,
+      "image": "/images/glove2.png",
+      "category": "GLOVE",
+      "name": "Golf Glove Pro",
+      "rating": 5,
+      "price": "$69.99",
+      "isNew": true
+    },
+    {
+      "id": 6,
+      "image": "/images/glove3.png",
+      "category": "GLOVE",
+      "name": "Golf Glove Standard",
+      "rating": 5,
+      "price": "$49.99"
+    },
+    {
+      "id": 7,
+      "image": "/images/ball6.png",
+      "category": "BALL",
+      "name": "Golf Ball Distance",
+      "rating": 4,
+      "price": "$79.99"
+    },
+    {
+      "id": 8,
+      "image": "/images/ball5.png",
+      "category": "BALL",
+      "name": "Golf Ball Accuracy",
+      "rating": 3,
+      "price": "$59.99",
+      "discountedPrice": "$49.99"
+    },
+    {
+      "id": 9,
+      "image": "/images/glove4.png",
+      "category": "GLOVE",
+      "name": "Golf Glove Comfort",
+      "rating": 4,
+      "price": "$54.99"
+    }
+  ]
+  
