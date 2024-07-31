@@ -169,7 +169,7 @@ const Page: React.FC = () => {
         <div className="flex-1 p-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {currentProducts.map((product) => (
-              <Link key={product.id} href={`/shop/${product.id}`} className="border rounded-lg overflow-hidden shadow-md relative">
+              <Link key={product.id} href={`/shop/${product.id}`} className="border-1 hover:border-red-500 rounded-lg overflow-hidden shadow-md relative group transition-transform duration-300">
                 {product.isNew && (
                   <span className="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1">
                     New
@@ -180,7 +180,7 @@ const Page: React.FC = () => {
                   alt={product.name}
                   width={300}
                   height={250}
-                  className="w-full h-[250px] object-cover bg-gray-100"
+                  className="w-full h-[250px] object-cover bg-gray-100 group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="p-4">
                   <div className="text-sm text-gray-600">{product.category}</div>
