@@ -6,7 +6,8 @@
     "name": "Golf Ball Pro",
     "rating": 4,
     "price": "$99.99",
-    "date": "2024-01-15"
+    "date": "2024-01-15",
+    "description": "Top-tier golf ball designed for professional golfers seeking maximum performance and distance."
   },
   {
     "id": 2,
@@ -16,7 +17,8 @@
     "rating": 5,
     "price": "$79.99",
     "discountedPrice": "$59.99",
-    "date": "2024-02-10"
+    "date": "2024-02-10",
+    "description": "High-quality glove offering superior comfort and grip, perfect for elite players."
   },
   {
     "id": 3,
@@ -26,7 +28,8 @@
     "rating": 3,
     "price": "$49.99",
     "discountedPrice": "$39.99",
-    "date": "2024-03-05"
+    "date": "2024-03-05",
+    "description": "Durable and affordable golf ball suitable for golfers of all skill levels."
   },
   {
     "id": 4,
@@ -35,7 +38,8 @@
     "name": "Golf Ball Premium",
     "rating": 4,
     "price": "$89.99",
-    "date": "2024-04-20"
+    "date": "2024-04-20",
+    "description": "Premium golf ball offering excellent control and distance, ideal for competitive play."
   },
   {
     "id": 5,
@@ -45,7 +49,8 @@
     "rating": 5,
     "price": "$69.99",
     "isNew": true,
-    "date": "2024-05-15"
+    "date": "2024-05-15",
+    "description": "Professional-grade golf glove with advanced materials for superior performance."
   },
   {
     "id": 6,
@@ -54,7 +59,8 @@
     "name": "Golf Glove Standard",
     "rating": 5,
     "price": "$49.99",
-    "date": "2024-06-10"
+    "date": "2024-06-10",
+    "description": "Standard golf glove offering a perfect balance of comfort and durability."
   },
   {
     "id": 7,
@@ -63,7 +69,8 @@
     "name": "Golf Ball Distance",
     "rating": 4,
     "price": "$79.99",
-    "date": "2024-07-01"
+    "date": "2024-07-01",
+    "description": "Golf ball engineered for maximum distance, perfect for long drives."
   },
   {
     "id": 8,
@@ -73,7 +80,8 @@
     "rating": 3,
     "price": "$59.99",
     "discountedPrice": "$49.99",
-    "date": "2024-08-12"
+    "date": "2024-08-12",
+    "description": "Designed to enhance accuracy, this golf ball is perfect for improving your game."
   },
   {
     "id": 9,
@@ -82,7 +90,8 @@
     "name": "Golf Glove Comfort",
     "rating": 4,
     "price": "$54.99",
-    "date": "2024-09-25"
+    "date": "2024-09-25",
+    "description": "Comfortable golf glove designed for long-lasting wear during rounds."
   },
   {
     "id": 10,
@@ -92,7 +101,8 @@
     "rating": 5,
     "price": "$99.99",
     "discountedPrice": "$89.99",
-    "date": "2024-10-05"
+    "date": "2024-10-05",
+    "description": "High-performance golf ball offering superior control and spin."
   },
   {
     "id": 11,
@@ -101,7 +111,8 @@
     "name": "Golf Glove Advanced",
     "rating": 4,
     "price": "$59.99",
-    "date": "2024-10-15"
+    "date": "2024-10-15",
+    "description": "Advanced golf glove with enhanced grip for better control."
   },
   {
     "id": 12,
@@ -110,7 +121,8 @@
     "name": "Golf Ball Extreme",
     "rating": 3,
     "price": "$69.99",
-    "date": "2024-11-01"
+    "date": "2024-11-01",
+    "description": "Extreme golf ball for those seeking maximum performance under tough conditions."
   },
   {
     "id": 13,
@@ -120,7 +132,8 @@
     "rating": 5,
     "price": "$79.99",
     "discountedPrice": "$69.99",
-    "date": "2024-11-15"
+    "date": "2024-11-15",
+    "description": "Premium golf glove offering top-notch comfort and durability."
   },
   {
     "id": 14,
@@ -129,7 +142,8 @@
     "name": "Golf Ball Ultimate",
     "rating": 4,
     "price": "$109.99",
-    "date": "2024-12-01"
+    "date": "2024-12-01",
+    "description": "Ultimate golf ball for players seeking the best in performance and distance."
   },
   {
     "id": 15,
@@ -138,7 +152,8 @@
     "name": "Golf Glove Superior",
     "rating": 5,
     "price": "$89.99",
-    "date": "2024-12-15"
+    "date": "2024-12-15",
+    "description": "Superior golf glove with exceptional fit and feel for enhanced performance."
   },
   {
     "id": 16,
@@ -147,7 +162,8 @@
     "name": "Golf Ball Performance",
     "rating": 4,
     "price": "$59.99",
-    "date": "2024-12-20"
+    "date": "2024-12-20",
+    "description": "Performance golf ball designed to improve your overall game."
   },
   {
     "id": 17,
@@ -156,7 +172,8 @@
     "name": "Golf Glove Comfort Plus",
     "rating": 4,
     "price": "$69.99",
-    "date": "2024-12-25"
+    "date": "2024-12-25",
+    "description": "Comfort Plus golf glove for extra comfort and durability during play."
   },
   {
     "id": 18,
@@ -166,7 +183,8 @@
     "rating": 3,
     "price": "$79.99",
     "discountedPrice": "$69.99",
-    "date": "2025-01-05"
+    "date": "2025-01-05",
+    "description": "Precision golf ball for those seeking pinpoint accuracy in their shots."
   },
   {
     "id": 19,
@@ -175,7 +193,8 @@
     "name": "Golf Glove Sport",
     "rating": 5,
     "price": "$59.99",
-    "date": "2025-01-15"
+    "date": "2025-01-15",
+    "description": "Sport golf glove designed for athletes who demand the best in performance."
   },
   {
     "id": 20,
@@ -184,7 +203,8 @@
     "name": "Golf Ball Master",
     "rating": 4,
     "price": "$89.99",
-    "date": "2025-02-01"
+    "date": "2025-02-01",
+    "description": "Master golf ball providing unmatched control and distance for top players."
   },
   {
     "id": 21,
@@ -194,7 +214,8 @@
     "rating": 5,
     "price": "$99.99",
     "discountedPrice": "$89.99",
-    "date": "2025-02-15"
+    "date": "2025-02-15",
+    "description": "Master golf glove for those who demand the best in comfort and performance."
   },
   {
     "id": 22,
@@ -203,7 +224,8 @@
     "name": "Golf Ball Elite",
     "rating": 3,
     "price": "$49.99",
-    "date": "2025-03-01"
+    "date": "2025-03-01",
+    "description": "Elite golf ball offering a perfect balance of distance and control."
   },
   {
     "id": 23,
@@ -213,7 +235,8 @@
     "rating": 4,
     "price": "$79.99",
     "discountedPrice": "$69.99",
-    "date": "2025-03-15"
+    "date": "2025-03-15",
+    "description": "Ultimate golf glove providing top-notch comfort and grip for serious players."
   },
   {
     "id": 24,
@@ -222,7 +245,8 @@
     "name": "Golf Ball Power",
     "rating": 5,
     "price": "$69.99",
-    "date": "2025-04-01"
+    "date": "2025-04-01",
+    "description": "Power golf ball designed for maximum distance and performance."
   },
   {
     "id": 25,
@@ -231,7 +255,8 @@
     "name": "Golf Glove Power",
     "rating": 4,
     "price": "$89.99",
-    "date": "2025-04-15"
+    "date": "2025-04-15",
+    "description": "Power golf glove offering superior grip and durability for powerful swings."
   },
   {
     "id": 26,
@@ -240,7 +265,8 @@
     "name": "Golf Ball Supreme",
     "rating": 3,
     "price": "$99.99",
-    "date": "2025-05-01"
+    "date": "2025-05-01",
+    "description": "Supreme golf ball offering unmatched performance and durability."
   },
   {
     "id": 27,
@@ -250,7 +276,8 @@
     "rating": 5,
     "price": "$109.99",
     "discountedPrice": "$99.99",
-    "date": "2025-05-15"
+    "date": "2025-05-15",
+    "description": "Supreme golf glove providing exceptional comfort and performance."
   },
   {
     "id": 28,
@@ -259,7 +286,8 @@
     "name": "Golf Ball Champion",
     "rating": 4,
     "price": "$79.99",
-    "date": "2025-06-01"
+    "date": "2025-06-01",
+    "description": "Champion golf ball designed for ultimate performance and distance."
   },
   {
     "id": 29,
@@ -269,7 +297,8 @@
     "rating": 5,
     "price": "$89.99",
     "discountedPrice": "$79.99",
-    "date": "2025-06-15"
+    "date": "2025-06-15",
+    "description": "Champion golf ball offering superior control and distance for top players."
   },
   {
     "id": 30,
@@ -278,6 +307,7 @@
     "name": "Golf Ball Precision Pro",
     "rating": 4,
     "price": "$109.99",
-    "date": "2025-07-01"
+    "date": "2025-07-01",
+    "description": "Precision Pro golf ball designed for golfers seeking the highest level of accuracy."
   }
 ]
