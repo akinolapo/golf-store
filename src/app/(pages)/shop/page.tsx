@@ -69,9 +69,13 @@ const Page: React.FC = () => {
   );
   const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
 
+  const breadcrumbs = [
+    { label: 'Home', href: '/' }
+  ];
+
   return (
     <div>
-      <UpperBanner title="Shop" />
+      <UpperBanner title="Shop" breadcrumbs={breadcrumbs} />
 
       <div className="container mx-auto p-4 flex flex-col lg:flex-row">
         {/* Filter Section */}
