@@ -14,6 +14,7 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = ["SHOP", "BALL", "GLOVE"];
 
@@ -112,8 +113,8 @@ const NewArrivals: React.FC = () => {
       </div>
       <Slider {...settings}>
         {filteredProducts.map((product) => (
-          <div key={product.id} className="p-3">
-            <div className="border border-gray-300 hover:border-red-500 relative group">
+          <Link href={`/shop/${product.id}`} key={product.id} className="p-3">
+            <div className="border-1 border-gray-300 hover:border-red-500 transition-transform duration-300 relative group">
               {product.isNew && (
                 <span className="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1">
                   New
@@ -124,7 +125,7 @@ const NewArrivals: React.FC = () => {
                 alt={product.name}
                 width={150}
                 height={150}
-                className="flex mx-auto"
+                className="flex mx-auto group-hover:scale-110 transition-transform duration-300"
               />
               <div className="p-4 text-center">
                 <p className="text-gray-500">{product.category}</p>
@@ -141,22 +142,8 @@ const NewArrivals: React.FC = () => {
                 </div>
                 <p className="text-xl font-bold">{product.price}</p>
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center space-x-2 opacity-0 group-hover:opacity-100 transition duration-300">
-                <button className="bg-white p-2 rounded-full">
-                  <FaShoppingCart />
-                </button>
-                <button className="bg-white p-2 rounded-full">
-                  <FaHeart />
-                </button>
-                <button className="bg-white p-2 rounded-full">
-                  <FaRandom />
-                </button>
-                <button className="bg-white p-2 rounded-full">
-                  <FaSearch />
-                </button>
-              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </Slider>
     </div>

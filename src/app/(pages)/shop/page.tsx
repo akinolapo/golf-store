@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import UpperBanner from "@/app/components/UpperBanner/UpperBanner";
-import { FaAngleDown, FaTimes } from "react-icons/fa";
+import { FaAngleDown, FaStar } from "react-icons/fa";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 const Page: React.FC = () => {
   const [sortOptionsOpen, setSortOptionsOpen] = useState(false);
@@ -169,10 +169,7 @@ const Page: React.FC = () => {
         <div className="flex-1 p-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {currentProducts.map((product) => (
-              <div
-                key={product.id}
-                className="border rounded-lg overflow-hidden shadow-md relative"
-              >
+              <Link key={product.id} href={`/shop/${product.id}`} className="border rounded-lg overflow-hidden shadow-md relative">
                 {product.isNew && (
                   <span className="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1">
                     New
@@ -183,12 +180,10 @@ const Page: React.FC = () => {
                   alt={product.name}
                   width={300}
                   height={250}
-                  className="w-full h-[250] object-cover bg-gray-100"
+                  className="w-full h-[250px] object-cover bg-gray-100"
                 />
                 <div className="p-4">
-                  <div className="text-sm text-gray-600">
-                    {product.category}
-                  </div>
+                  <div className="text-sm text-gray-600">{product.category}</div>
                   <h2 className="text-lg font-semibold">{product.name}</h2>
                   <div className="flex justify-start items-center mb-2">
                     {[...Array(5)].map((_, i) => (
@@ -217,7 +212,7 @@ const Page: React.FC = () => {
                     )}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           {/* Pagination */}

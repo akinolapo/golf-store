@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = ["SHOP", "BALL", "GLOVE"];
 
@@ -67,10 +68,10 @@ const FeaturedProducts: React.FC = () => {
       </p>
       <Slider {...settings}>
         {filteredProducts.map((product) => (
-          <div key={product.id} className="p-3">
-            <div className="flex border border-gray-300 hover:border-red-500 relative group">
+          <Link href={`/shop/${product.id}`} key={product.id} className="p-3">
+            <div className="flex border-1 border-gray-300 hover:border-red-500 relative group transition-transform duration-300">
               <div className="w-1/2">
-                <Image src={product.image} alt={product.name} width={150} height={150} className="flex mx-auto" />
+                <Image src={product.image} alt={product.name} width={150} height={150} className="flex mx-auto group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div className="w-1/2 p-4 flex flex-col justify-center">
                 <p className="text-gray-500">{product.category}</p>
@@ -97,7 +98,7 @@ const FeaturedProducts: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </Slider>
     </div>
