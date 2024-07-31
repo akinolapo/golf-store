@@ -1,79 +1,283 @@
 [
-    {
-      "id": 1,
-      "image": "/images/ball1.png",
-      "category": "BALL",
-      "name": "Golf Ball Pro",
-      "rating": 4,
-      "price": "$99.99"
-    },
-    {
-      "id": 2,
-      "image": "/images/glove1.png",
-      "category": "GLOVE",
-      "name": "Golf Glove Elite",
-      "rating": 5,
-      "price": "$79.99",
-      "discountedPrice": "$59.99"
-    },
-    {
-      "id": 3,
-      "image": "/images/ball2.png",
-      "category": "BALL",
-      "name": "Golf Ball Max",
-      "rating": 3,
-      "price": "$49.99",
-      "discountedPrice": "$39.99"
-    },
-    {
-      "id": 4,
-      "image": "/images/ball4.png",
-      "category": "BALL",
-      "name": "Golf Ball Premium",
-      "rating": 4,
-      "price": "$89.99"
-    },
-    {
-      "id": 5,
-      "image": "/images/glove2.png",
-      "category": "GLOVE",
-      "name": "Golf Glove Pro",
-      "rating": 5,
-      "price": "$69.99",
-      "isNew": true
-    },
-    {
-      "id": 6,
-      "image": "/images/glove3.png",
-      "category": "GLOVE",
-      "name": "Golf Glove Standard",
-      "rating": 5,
-      "price": "$49.99"
-    },
-    {
-      "id": 7,
-      "image": "/images/ball6.png",
-      "category": "BALL",
-      "name": "Golf Ball Distance",
-      "rating": 4,
-      "price": "$79.99"
-    },
-    {
-      "id": 8,
-      "image": "/images/ball5.png",
-      "category": "BALL",
-      "name": "Golf Ball Accuracy",
-      "rating": 3,
-      "price": "$59.99",
-      "discountedPrice": "$49.99"
-    },
-    {
-      "id": 9,
-      "image": "/images/glove4.png",
-      "category": "GLOVE",
-      "name": "Golf Glove Comfort",
-      "rating": 4,
-      "price": "$54.99"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "image": "/images/ball1.png",
+    "category": "BALL",
+    "name": "Golf Ball Pro",
+    "rating": 4,
+    "price": "$99.99",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "image": "/images/glove1.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Elite",
+    "rating": 5,
+    "price": "$79.99",
+    "discountedPrice": "$59.99",
+    "date": "2024-02-10"
+  },
+  {
+    "id": 3,
+    "image": "/images/ball2.png",
+    "category": "BALL",
+    "name": "Golf Ball Max",
+    "rating": 3,
+    "price": "$49.99",
+    "discountedPrice": "$39.99",
+    "date": "2024-03-05"
+  },
+  {
+    "id": 4,
+    "image": "/images/ball3.png",
+    "category": "BALL",
+    "name": "Golf Ball Premium",
+    "rating": 4,
+    "price": "$89.99",
+    "date": "2024-04-20"
+  },
+  {
+    "id": 5,
+    "image": "/images/glove2.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Pro",
+    "rating": 5,
+    "price": "$69.99",
+    "isNew": true,
+    "date": "2024-05-15"
+  },
+  {
+    "id": 6,
+    "image": "/images/glove3.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Standard",
+    "rating": 5,
+    "price": "$49.99",
+    "date": "2024-06-10"
+  },
+  {
+    "id": 7,
+    "image": "/images/ball4.png",
+    "category": "BALL",
+    "name": "Golf Ball Distance",
+    "rating": 4,
+    "price": "$79.99",
+    "date": "2024-07-01"
+  },
+  {
+    "id": 8,
+    "image": "/images/ball5.png",
+    "category": "BALL",
+    "name": "Golf Ball Accuracy",
+    "rating": 3,
+    "price": "$59.99",
+    "discountedPrice": "$49.99",
+    "date": "2024-08-12"
+  },
+  {
+    "id": 9,
+    "image": "/images/glove4.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Comfort",
+    "rating": 4,
+    "price": "$54.99",
+    "date": "2024-09-25"
+  },
+  {
+    "id": 10,
+    "image": "/images/ball6.png",
+    "category": "BALL",
+    "name": "Golf Ball Super",
+    "rating": 5,
+    "price": "$99.99",
+    "discountedPrice": "$89.99",
+    "date": "2024-10-05"
+  },
+  {
+    "id": 11,
+    "image": "/images/glove5.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Advanced",
+    "rating": 4,
+    "price": "$59.99",
+    "date": "2024-10-15"
+  },
+  {
+    "id": 12,
+    "image": "/images/ball7.png",
+    "category": "BALL",
+    "name": "Golf Ball Extreme",
+    "rating": 3,
+    "price": "$69.99",
+    "date": "2024-11-01"
+  },
+  {
+    "id": 13,
+    "image": "/images/glove6.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Premium",
+    "rating": 5,
+    "price": "$79.99",
+    "discountedPrice": "$69.99",
+    "date": "2024-11-15"
+  },
+  {
+    "id": 14,
+    "image": "/images/ball8.png",
+    "category": "BALL",
+    "name": "Golf Ball Ultimate",
+    "rating": 4,
+    "price": "$109.99",
+    "date": "2024-12-01"
+  },
+  {
+    "id": 15,
+    "image": "/images/glove7.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Superior",
+    "rating": 5,
+    "price": "$89.99",
+    "date": "2024-12-15"
+  },
+  {
+    "id": 16,
+    "image": "/images/ball9.png",
+    "category": "BALL",
+    "name": "Golf Ball Performance",
+    "rating": 4,
+    "price": "$59.99",
+    "date": "2024-12-20"
+  },
+  {
+    "id": 17,
+    "image": "/images/glove8.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Comfort Plus",
+    "rating": 4,
+    "price": "$69.99",
+    "date": "2024-12-25"
+  },
+  {
+    "id": 18,
+    "image": "/images/ball10.png",
+    "category": "BALL",
+    "name": "Golf Ball Precision",
+    "rating": 3,
+    "price": "$79.99",
+    "discountedPrice": "$69.99",
+    "date": "2025-01-05"
+  },
+  {
+    "id": 19,
+    "image": "/images/glove9.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Sport",
+    "rating": 5,
+    "price": "$59.99",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 20,
+    "image": "/images/ball11.png",
+    "category": "BALL",
+    "name": "Golf Ball Master",
+    "rating": 4,
+    "price": "$89.99",
+    "date": "2025-02-01"
+  },
+  {
+    "id": 21,
+    "image": "/images/glove10.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Master",
+    "rating": 5,
+    "price": "$99.99",
+    "discountedPrice": "$89.99",
+    "date": "2025-02-15"
+  },
+  {
+    "id": 22,
+    "image": "/images/ball12.png",
+    "category": "BALL",
+    "name": "Golf Ball Elite",
+    "rating": 3,
+    "price": "$49.99",
+    "date": "2025-03-01"
+  },
+  {
+    "id": 23,
+    "image": "/images/glove11.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Ultimate",
+    "rating": 4,
+    "price": "$79.99",
+    "discountedPrice": "$69.99",
+    "date": "2025-03-15"
+  },
+  {
+    "id": 24,
+    "image": "/images/ball13.png",
+    "category": "BALL",
+    "name": "Golf Ball Power",
+    "rating": 5,
+    "price": "$69.99",
+    "date": "2025-04-01"
+  },
+  {
+    "id": 25,
+    "image": "/images/glove12.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Power",
+    "rating": 4,
+    "price": "$89.99",
+    "date": "2025-04-15"
+  },
+  {
+    "id": 26,
+    "image": "/images/ball14.png",
+    "category": "BALL",
+    "name": "Golf Ball Supreme",
+    "rating": 3,
+    "price": "$99.99",
+    "date": "2025-05-01"
+  },
+  {
+    "id": 27,
+    "image": "/images/glove13.png",
+    "category": "GLOVE",
+    "name": "Golf Glove Supreme",
+    "rating": 5,
+    "price": "$109.99",
+    "discountedPrice": "$99.99",
+    "date": "2025-05-15"
+  },
+  {
+    "id": 28,
+    "image": "/images/ball15.png",
+    "category": "BALL",
+    "name": "Golf Ball Champion",
+    "rating": 4,
+    "price": "$79.99",
+    "date": "2025-06-01"
+  },
+  {
+    "id": 29,
+    "image": "/images/ball17.png",
+    "category": "BALL",
+    "name": "Golf Ball Champion",
+    "rating": 5,
+    "price": "$89.99",
+    "discountedPrice": "$79.99",
+    "date": "2025-06-15"
+  },
+  {
+    "id": 30,
+    "image": "/images/ball16.png",
+    "category": "BALL",
+    "name": "Golf Ball Precision Pro",
+    "rating": 4,
+    "price": "$109.99",
+    "date": "2025-07-01"
+  }
+]

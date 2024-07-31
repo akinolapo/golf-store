@@ -16,3 +16,22 @@ body {
     text-wrap: balance;
   }
 }
+
+/* styles.css or global.css */
+.custom-checkbox {
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  border: 2px solid #e3342f;
+  border-radius: 0.25rem;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: #e3342f;
+}
