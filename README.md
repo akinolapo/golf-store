@@ -1,10 +1,10 @@
 # Documentation #
 
-Shop Application
+## Shop Application ##
 
-this project is Next.js application for shop page that lits products based on categories. The application inculdes filtering, sorting, and pagination functionalities.
+This project is Next.js application for shop page that lits products based on categories. The application inculdes filtering, sorting, and pagination functionalities.
 
-Features:
+### Features: ###
 Product listing by category
 sorting by price, name, or date
 price range filtering
@@ -12,7 +12,7 @@ Pagination
 Breadcrumb navigation
 Responsive design
 
-Technologies Used:
+### Technologies Used: ###
 Next.js
 React
 Tailwind CSS
@@ -21,8 +21,10 @@ React Icons
 Next/Image
 Fetch API
 
+### Deployment: ###
+It can be deployed on vercel since this is the frontend, once the backend is ready they can all be move to a VPS
 
-File Structure:
+### File Structure: ###
 public
     products.json
     /images
