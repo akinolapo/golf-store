@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { CartProvider } from "./context/CartContext";
 
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <CartProvider>
     <html lang="en">
       <body>
         <Header/>
@@ -22,5 +24,6 @@ export default function RootLayout({
         <Footer/>
       </body>
     </html>
+    </CartProvider>
   );
 }

@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaStar, FaShoppingCart, FaHeart, FaRandom } from "react-icons/fa";
 import UpperBanner from "@/app/components/UpperBanner/UpperBanner";
+import { useCart } from "@/app/context/CartContext";
+import CartPopup from "@/app/components/CartPopup/CartPopup";
 
 interface Product {
   id: number;
@@ -28,6 +30,8 @@ const Page: React.FC<ProductPageProps> = ({ params }) => {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [showPopup, setShowPopup] = useState(false);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -50,6 +54,23 @@ const Page: React.FC<ProductPageProps> = ({ params }) => {
 
     fetchProducts();
   }, [productId]);
+
+  const handleAddToCart = () => {
+    if (product) {
+      const item = {
+        id: product.id,
+        name: product.name,
+        price: product.discountedPrice || product.price,
+        quantity
+      };
+      console.log('Adding to cart:', item);
+      addToCart(item);
+      setShowPopup(true);
+    } else {
+      console.error('Product is not defined');
+    }
+  };
+  
 
   if (loading) {
     return <div>Loading...</div>;
@@ -111,7 +132,10 @@ const Page: React.FC<ProductPageProps> = ({ params }) => {
               className="border-1 border-gray-300 rounded-full text-center px-4 w-32 py-2 mr-2"
               min="1"
             />
-            <button className="bg-red-500 text-white px-8 hover:bg-gray-500 py-2 rounded-full flex items-center">
+            <button
+              onClick={handleAddToCart}
+              className="bg-red-500 text-white px-8 hover:bg-gray-500 py-2 rounded-full flex items-center"
+            >
               <FaShoppingCart className="mr-2" /> Add to Cart
             </button>
           </div>
@@ -125,6 +149,7 @@ const Page: React.FC<ProductPageProps> = ({ params }) => {
           </div>
         </div>
       </div>
+      {showPopup && <CartPopup onClose={() => setShowPopup(false)} />}
     </div>
   );
 };
