@@ -1,9 +1,12 @@
 'use client';
 import React from 'react';
 import { useCart } from '@/app/context/CartContext';
+import { FaTrashAlt } from 'react-icons/fa';
+import Link from 'next/link';
+import UpperBanner from '@/app/components/UpperBanner/UpperBanner';
 
 const Page: React.FC = () => {
-  const { cartItems, updateQuantity, removeFromCart } = useCart();
+  const { cartItems, updateQuantity, removeFromCart, clearCart } = useCart();
 
   console.log('Cart items:', cartItems); // Debugging line
 
@@ -14,45 +17,108 @@ const Page: React.FC = () => {
     }, 0);
   };
 
+  const handleClearCart = () => {
+    clearCart();
+  };
+
+  const breadcrumbs = [
+    { label: 'Home', href: '/' },
+    { label: 'Shop', href: '/shop' }
+  ];
+
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
+    <>
+      <UpperBanner title="Shopping Cart" breadcrumbs={breadcrumbs} />
+    <div className="container mx-auto py-8 px-4">
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <div>
-          {cartItems.map((item) => (
-            <div key={item.id} className="flex items-center mb-4">
-              <div className="w-1/3">
-                <img src={item.image} alt={item.name} className="w-24 h-24 object-cover rounded" />
-              </div>
-              <div className="w-1/3">
-                <p className="font-bold">{item.name}</p>
-                <p>{item.price}</p>
-              </div>
-              <div className="w-1/3 flex items-center">
-                <input
-                  type="number"
-                  value={item.quantity}
-                  onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
-                  className="border rounded text-center w-16 mr-2"
-                  min="1"
-                />
-                <button
-                  onClick={() => removeFromCart(item.id)}
-                  className="bg-red-500 text-white px-4 py-2 rounded"
-                >
-                  Remove
-                </button>
-              </div>
+        <div className="overflow-x-auto">
+          <div className="hidden lg:block">
+            <table className="min-w-full bg-white border border-gray-200">
+              <thead>
+                <tr>
+                  <th className="py-2 px-4 border-b border-gray-200">Item</th>
+                  <th className="py-2 px-4 border-b border-gray-200">Price</th>
+                  <th className="py-2 px-4 border-b border-gray-200">Qty</th>
+                  <th className="py-2 px-4 border-b border-gray-200">Subtotal</th>
+                  <th className="py-2 px-4 border-b border-gray-200">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartItems.map((item) => (
+                  <tr key={item.id} className="border-b border-gray-200">
+                    <td className="py-4 px-4 flex items-center">
+                      <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded mr-4" />
+                      <span className="font-bold">{item.name}</span>
+                    </td>
+                    <td className="py-4 px-4">{item.price}</td>
+                    <td className="py-4 px-4">
+                      <input
+                        type="number"
+                        value={item.quantity}
+                        onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
+                        className="border rounded text-center w-16"
+                        min="1"
+                      />
+                    </td>
+                    <td className="py-4 px-4">${(parseFloat(item.price.replace('$', '')) * item.quantity).toFixed(2)}</td>
+                    <td className="py-4 px-4 text-red-500 cursor-pointer">
+                      <FaTrashAlt onClick={() => removeFromCart(item.id)} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          
+          {/* Grid layout for md and sm screens */}
+          <div className="block lg:hidden">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {cartItems.map((item) => (
+                <div key={item.id} className="bg-white border border-gray-200 p-4 rounded-lg flex flex-col">
+                  <div className="flex items-center mb-4">
+                    <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded mr-4" />
+                    <span className="font-bold">{item.name}</span>
+                  </div>
+                  <div className="mb-2">Price: ${item.price}</div>
+                  <div className="mb-2">
+                    Qty: 
+                    <input
+                      type="number"
+                      value={item.quantity}
+                      onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
+                      className="border rounded text-center w-16 ml-2"
+                      min="1"
+                    />
+                  </div>
+                  <div className="mb-2">Subtotal: ${(parseFloat(item.price.replace('$', '')) * item.quantity).toFixed(2)}</div>
+                  <div className="text-red-500 cursor-pointer mt-auto">
+                    <FaTrashAlt onClick={() => removeFromCart(item.id)} />
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-          <div className="text-right font-bold">
+          </div>
+          
+          <div className="text-right font-bold mt-4">
             Total: ${getTotal().toFixed(2)}
+          </div>
+          <div className="flex justify-between mt-4">
+            <Link className="bg-gray-500 text-white px-4 py-2 rounded" href="/shop">
+              Continue Shopping
+            </Link>
+            <button
+              onClick={handleClearCart}
+              className="bg-red-500 text-white px-4 py-2 rounded"
+            >
+              Clear Cart
+            </button>
           </div>
         </div>
       )}
     </div>
+    </>
   );
 };
 
