@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { useCart } from "@/app/context/CartContext";
 import UpperBanner from "@/app/components/UpperBanner/UpperBanner";
+import { useRouter } from 'next/navigation';
 
 const Page: React.FC = () => {
   const { cartItems, updateQuantity, clearCart } = useCart();
+  const router = useRouter();
 
   const [form, setForm] = useState({
     email: "",
@@ -38,16 +40,15 @@ const Page: React.FC = () => {
       shippingDetails: form,
       total: getTotal().toFixed(2),
     };
-  
+
     console.log("Order Details to Store:", orderDetails);
-  
+
     localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+    setOrderDetails(orderDetails);
     setOrderPlaced(true);
     clearCart();
-    // Navigate to the order details page
-    window.location.href = '/shop/cart/checkout/order-details';
+    router.push('/shop/cart/checkout/order-details'); // Use router.push to navigate to the order summary page
   };
-  
 
   const getTotal = () => {
     return cartItems.reduce((total, item) => {
@@ -60,12 +61,6 @@ const Page: React.FC = () => {
     { label: "Shop", href: "/shop" },
     { label: "Cart", href: "/shop/cart" },
   ];
-
-  useEffect(() => {
-    if (orderPlaced) {
-      console.log("Order Details:", orderDetails);
-    }
-  }, [orderPlaced, orderDetails]);
 
   if (orderPlaced) {
     return (
@@ -180,110 +175,22 @@ const Page: React.FC = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Shipping Address</h2>
             <form onSubmit={handlePlaceOrder}>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">First Name</label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={form.firstName}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">Last Name</label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={form.lastName}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">Street Address</label>
-                <input
-                  type="text"
-                  name="streetAddress"
-                  value={form.streetAddress}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">Country</label>
-                <select
-                  name="country"
-                  value={form.country}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                >
-                  <option value="">Select Country</option>
-                  <option value="USA">USA</option>
-                  <option value="Canada">Canada</option>
-                  <option value="UK">UK</option>
-                  {/* Add more countries as needed */}
-                </select>
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">State/Province</label>
-                <input
-                  type="text"
-                  name="state"
-                  value={form.state}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">City</label>
-                <input
-                  type="text"
-                  name="city"
-                  value={form.city}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">Zip/Postal Code</label>
-                <input
-                  type="text"
-                  name="zip"
-                  value={form.zip}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 text-lg">Phone Number</label>
-                <input
-                  type="text"
-                  name="phoneNumber"
-                  value={form.phoneNumber}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 px-3 py-2 rounded-lg"
-                  required
-                />
-              </div>
+              {/* Form fields */}
+              {Object.keys(form).map((key) => (
+                <div className="mb-4" key={key}>
+                  <label className="block mb-2 text-lg">
+                    {key.replace(/([A-Z])/g, ' $1').toUpperCase()}
+                  </label>
+                  <input
+                    type={key === "email" ? "email" : "text"}
+                    name={key}
+                    value={form[key]}
+                    onChange={handleChange}
+                    className="w-full border border-gray-300 px-3 py-2 rounded-lg"
+                    required
+                  />
+                </div>
+              ))}
               <button
                 type="submit"
                 className="bg-green-500 text-white px-4 py-2 rounded-lg w-full"
