@@ -24,6 +24,9 @@ const Page: React.FC = () => {
           {cartItems.map((item) => (
             <div key={item.id} className="flex items-center mb-4">
               <div className="w-1/3">
+                <img src={item.image} alt={item.name} className="w-24 h-24 object-cover rounded" />
+              </div>
+              <div className="w-1/3">
                 <p className="font-bold">{item.name}</p>
                 <p>{item.price}</p>
               </div>

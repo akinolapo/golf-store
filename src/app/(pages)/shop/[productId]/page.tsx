@@ -60,8 +60,9 @@ const Page: React.FC<ProductPageProps> = ({ params }) => {
       const item = {
         id: product.id,
         name: product.name,
+        image: product.image,
         price: product.discountedPrice || product.price,
-        quantity
+        quantity,
       };
       console.log('Adding to cart:', item);
       addToCart(item);
