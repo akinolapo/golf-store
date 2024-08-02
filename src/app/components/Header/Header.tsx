@@ -29,10 +29,10 @@ const Header: React.FC = () => {
           <span>Welcome you to Golf store!</span>
         </div>
         <div className="flex items-center space-x-4">
-          <a href="#" className="hover:text-red-500 flex items-center space-x-1">
+          <Link href="/account" className="hover:text-red-500 flex items-center space-x-1">
             <FaUser />
             <span>My Account</span>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -44,17 +44,17 @@ const Header: React.FC = () => {
             </button>
           </div>
           <div>
-            <a href="#">
+            <Link href="/">
               <Image src="/glogo.png" width={140} height={32} alt="logo" />
-            </a>
+            </Link>
           </div>
           <nav className="hidden lg:flex items-center space-x-8">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
             >
               Home
-            </a>
+            </Link>
             <div className="relative group">
               <a
                 href="/shop"
@@ -69,37 +69,37 @@ const Header: React.FC = () => {
                     <div>
                       <h4 className="font-semibold mb-2">Category 1</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Category 2</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Category 3</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Category 4</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -116,12 +116,12 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="relative group">
-              <a
+              <Link
                 href="#"
                 className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
               >
                 <span className="flex items-center">Accessories <MdKeyboardArrowDown className="text-gray-400" /></span>
-              </a>
+              </Link>
               <div className="absolute hidden group-hover:block bg-white shadow-md w-[820px] left-0 top-full z-50">
                 {/* Add dropdown items here */}
                 <div className="container mx-auto p-4 pt-8">
@@ -130,10 +130,10 @@ const Header: React.FC = () => {
                     <div>
                       <h4 className="font-semibold mb-2">Category 1</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                     <div>
@@ -148,19 +148,19 @@ const Header: React.FC = () => {
                     <div>
                       <h4 className="font-semibold mb-2">Category 3</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Category 4</h4>
                       <ul>
-                        <li><a href="#" className="hover:text-red-700">Item 1</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 2</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 3</a></li>
-                        <li><a href="#" className="hover:text-red-700">Item 4</a></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 1</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 2</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 3</Link></li>
+                        <li><Link href="#" className="hover:text-red-700">Item 4</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -176,26 +176,26 @@ const Header: React.FC = () => {
                 </div>
               </div>
             </div>
-            <a
+            <Link
               href="#"
               className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
             >
               Specials
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
             >
               Contact Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
             >
               About Us
-            </a>
+            </Link>
             <div className="relative group">
-              <a
+              <Link
                 href="#"
                 className="relative font-semibold hover:text-red-700 hover:border-b-2 hover:border-red-500"
               >
@@ -203,7 +203,7 @@ const Header: React.FC = () => {
                 <span className="absolute -top-3 left-4 text-xs text-white bg-red-500 px-2 rounded-full">
                   Hot
                 </span>
-              </a>
+              </Link>
               <div className="absolute hidden group-hover:block bg-white shadow-md">
                 {/* Add dropdown items here */}
               </div>
@@ -216,9 +216,9 @@ const Header: React.FC = () => {
             <button className="hover:text-red-700 hidden md:inline">
               <FaRandom className="text-2xl" />
             </button>
-            <button className="hover:text-red-700 hidden md:inline">
+            <Link href='/account' className="hover:text-red-700 hidden md:inline">
               <FaHeart className="text-2xl" />
-            </button>
+            </Link>
             <div className="relative">
               <Link href='/shop/cart' className="hover:text-red-700">
                 <FaShoppingCart className="text-3xl" />
@@ -240,17 +240,17 @@ const Header: React.FC = () => {
             </button>
             {/* Menu items go here */}
             <nav className="flex flex-col">
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Home</a>
-              <a href="/shop" className="text-black border-b-2 p-4 hover:text-red-700">
+              <Link href="/" className="text-black border-b-2 p-4 hover:text-red-700">Home</Link>
+              <Link href="/shop" className="text-black border-b-2 p-4 hover:text-red-700">
                 <span className="flex items-center justify-between">Shop <MdKeyboardArrowDown className="text-gray-400 text-2xl" /></span>
-              </a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">
+              </Link>
+              <Link href="#" className="text-black border-b-2 p-4 hover:text-red-700">
                 <span className="flex items-center justify-between">Accessories <MdKeyboardArrowDown className="text-gray-400 text-2xl" /></span>
-              </a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Specials</a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Contact Us</a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">About Us</a>
-              <a href="#" className="text-black border-b-2 p-4 hover:text-red-700">Blog</a>
+              </Link>
+              <Link href="#" className="text-black border-b-2 p-4 hover:text-red-700">Specials</Link>
+              <Link href="#" className="text-black border-b-2 p-4 hover:text-red-700">Contact Us</Link>
+              <Link href="#" className="text-black border-b-2 p-4 hover:text-red-700">About Us</Link>
+              <Link href="#" className="text-black border-b-2 p-4 hover:text-red-700">Blog</Link>
             </nav>
           </div>
           <div className="bg-black bg-opacity-50 w-1/4 h-full" onClick={closeMenu}></div>
