@@ -28,7 +28,7 @@ const Page: React.FC = () => {
   const { cartItems, shippingDetails, total } = orderDetails;
 
   const breadcrumbs = [
-    { label: "Cart", href: "/cart" },
+    { label: "Cart", href: "/shop/cart" },
     { label: "Checkout", href: "/cart/checkout" },
   ];
 
