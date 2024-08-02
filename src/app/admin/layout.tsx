@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 
 export const metadata: Metadata = {
-  title: "Golf Store",
-  description: "Store page",
+  title: "Store Admin Dashboard",
+  description: "Dashboard",
 };
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
         <Link className="flex items-center p-2 hover:bg-gray-700" href="/admin/orders">
             <FaListAlt className="mr-2" /> Order List
         </Link>
-        <Link href="/admin/profile">
+        <Link className="flex items-center p-2 hover:bg-gray-700"  href="/admin/profile">
             <FaUser className="mr-2" /> Profile
         </Link>
       </nav>
