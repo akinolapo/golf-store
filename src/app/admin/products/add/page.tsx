@@ -98,7 +98,7 @@ const AddProduct: React.FC = () => {
           >
             <option value="">Select a category</option>
             <option value="BALL">Ball</option>
-            <option value="CLUB">Club</option>
+            <option value="CLUB">Glove</option>
             {/* Add more categories as needed */}
           </select>
         </div>
