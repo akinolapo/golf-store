@@ -28,8 +28,17 @@ const Page: React.FC = () => {
     fetchProducts();
   }, []);
 
+  const categoryFilter = Array.isArray(category)
+    ? category.map(cat => cat.toLowerCase()).join(', ')
+    : category?.toLowerCase() || '';
+
   const filteredProducts = products.filter((product) => {
-    const isCategoryMatch = product.category.toLowerCase() === category.toLowerCase();
+    // Handle product.category as a single string or array of strings
+    const productCategories = Array.isArray(product.category)
+      ? product.category.join(' ').toLowerCase()
+      : product.category.toLowerCase();
+
+    const isCategoryMatch = productCategories.includes(categoryFilter);
     const isPriceMatch =
       parseFloat(product.price.replace("$", "")) >= minPrice &&
       parseFloat(product.price.replace("$", "")) <= maxPrice;
@@ -65,9 +74,9 @@ const Page: React.FC = () => {
     { label: "Shop", href: "/shop" }
   ];
 
-  const title = Array.isArray(category) 
+  const title = Array.isArray(category)
     ? category.map(cat => cat.charAt(0).toUpperCase() + cat.slice(1)).join(", ")
-    : category.charAt(0).toUpperCase() + category.slice(1);
+    : category?.charAt(0).toUpperCase() + category?.slice(1);
 
   return (
     <div>

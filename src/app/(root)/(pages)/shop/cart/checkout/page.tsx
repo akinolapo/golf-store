@@ -1,36 +1,50 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useCart } from "@/app/context/CartContext";
 import UpperBanner from "@/app/components/UpperBanner/UpperBanner";
 import { useRouter } from 'next/navigation';
+
+type FormState = {
+  email: string;
+  firstName: string;
+  lastName: string;
+  streetAddress: string;
+  country: string;
+  state: string;
+  city: string;
+  zip: string;
+  phoneNumber: string;
+};
+
+const initialFormState: FormState = {
+  email: "",
+  firstName: "",
+  lastName: "",
+  streetAddress: "",
+  country: "",
+  state: "",
+  city: "",
+  zip: "",
+  phoneNumber: "",
+};
 
 const Page: React.FC = () => {
   const { cartItems, updateQuantity, clearCart } = useCart();
   const router = useRouter();
 
-  const [form, setForm] = useState({
-    email: "",
-    firstName: "",
-    lastName: "",
-    streetAddress: "",
-    country: "",
-    state: "",
-    city: "",
-    zip: "",
-    phoneNumber: "",
-  });
-
+  const [form, setForm] = useState<FormState>(initialFormState);
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [orderDetails, setOrderDetails] = useState<any>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
   };
 
   const handlePlaceOrder = (e: React.FormEvent) => {
@@ -184,7 +198,7 @@ const Page: React.FC = () => {
                   <input
                     type={key === "email" ? "email" : "text"}
                     name={key}
-                    value={form[key]}
+                    value={form[key as keyof FormState]}
                     onChange={handleChange}
                     className="w-full border border-gray-300 px-3 py-2 rounded-lg"
                     required
