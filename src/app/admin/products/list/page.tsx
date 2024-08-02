@@ -16,7 +16,7 @@ interface Product {
   date: string;
 }
 
-const ProductList: React.FC = () => {
+const Page: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
@@ -131,4 +131,4 @@ const ProductList: React.FC = () => {
   );
 };
 
-export default ProductList;
+export default Page;
